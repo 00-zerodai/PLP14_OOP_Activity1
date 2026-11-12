@@ -99,3 +99,61 @@ class FirstClassPassenger(Passenger):
         )
 
 
+
+
+
+Python
+# --- Terminal Booking Workflow ---
+
+
+def run_booking_cli():
+    print("=========================================")
+    print("   WELCOME TO THE AIRLINE BOOKING CLI    ")
+    print("=========================================")
+    print("Select Ticket Class:")
+    print("[1] Economy")
+    print("[2] Business")
+    print("[3] First Class")
+
+    # 1. Select Class with validation
+    while True:
+        choice = input("Enter choice (1, 2, or 3): ").strip()
+        if choice in ("1", "2", "3"):
+            break
+        print("Invalid selection. Please enter 1, 2, or 3.")
+
+    print("\n--- Enter Passenger Details ---")
+    # 2. Collect Base Flight Details
+    name = get_non_empty_input("Full Name: ")
+    location = get_non_empty_input("Departure City: ")
+    destination = get_non_empty_input("Destination City: ")
+    date = get_non_empty_input("Travel Date (e.g., YYYY-MM-DD): ")
+
+    # 3. Dynamic Data Entry & Instantiation
+    if choice == "1":
+        seat_pref = get_non_empty_input("Seat Preference (Window/Aisle/Middle): ")
+        passenger = EconomyPassenger(name, location, destination, date, seat_pref)
+
+    elif choice == "2":
+        lounge_code = get_non_empty_input("Lounge Pass Code: ")
+        passenger = BusinessPassenger(name, location, destination, date, lounge_code)
+
+    else:  # choice == "3"
+        suite_num = get_non_empty_input("Suite Number: ")
+        chauffeur = get_yes_no_input("Include Chauffeur Service? (y/n): ")
+        passenger = FirstClassPassenger(
+            name, location, destination, date, suite_num, chauffeur
+        )
+
+    # 4. Summary Output
+    print("\n=========================================")
+    print("         BOOKING CONFIRMATION            ")
+    print("=========================================")
+    print(passenger.get_passenger_info())
+    print("=========================================")
+
+
+if __name__ == "__main__":
+    run_booking_cli()
+
+
