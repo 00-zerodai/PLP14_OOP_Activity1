@@ -44,4 +44,28 @@ class EconomyPassenger(Passenger):
             f"Seat Preference: {self.seat_preference}"
         )
 
+class BusinessPassenger(Passenger):
+   """Child class for Business Class passengers."""
 
+   def __init__(
+       self,
+       name: str,
+       location: str,
+       destination: str,
+       date: str,
+       lounge_pass_code: str,
+   ):
+       super().__init__(name, location, destination, date)
+       self.lounge_pass_code = lounge_pass_code
+
+   def get_weight_allowance(self) -> int:
+       """Overrides default luggage allowance to 100 kg."""
+       return 100
+
+   def get_passenger_info(self) -> str:
+       base_info = super().get_passenger_info()
+       return (
+           f"=== BUSINESS CLASS TICKET ===\n"
+           f"{base_info}\n"
+           f"Lounge Pass    : {self.lounge_pass_code}"
+)
