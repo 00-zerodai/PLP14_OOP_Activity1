@@ -69,3 +69,33 @@ class BusinessPassenger(Passenger):
            f"{base_info}\n"
            f"Lounge Pass    : {self.lounge_pass_code}"
        )
+
+
+Python
+class FirstClassPassenger(Passenger):
+    """Child class for First Class passengers."""
+
+    def __init__(
+        self,
+        name: str,
+        location: str,
+        destination: str,
+        date: str,
+        suite_number: str,
+        chauffeur_service: bool,
+    ):
+        super().__init__(name, location, destination, date)
+        self.suite_number = suite_number
+        self.chauffeur_service = chauffeur_service
+
+    def get_passenger_info(self) -> str:
+        base_info = super().get_passenger_info()
+        chauffeur_status = "Included" if self.chauffeur_service else "Not Requested"
+        return (
+            f"=== FIRST CLASS TICKET ===\n"
+            f"{base_info}\n"
+            f"Suite Number   : {self.suite_number}\n"
+            f"Chauffeur      : {chauffeur_status}"
+        )
+
+
