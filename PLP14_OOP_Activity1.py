@@ -68,4 +68,4 @@ class BusinessPassenger(Passenger):
            f"=== BUSINESS CLASS TICKET ===\n"
            f"{base_info}\n"
            f"Lounge Pass    : {self.lounge_pass_code}"
-)
+       )
