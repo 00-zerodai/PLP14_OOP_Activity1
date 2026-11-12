@@ -99,7 +99,27 @@ class FirstClassPassenger(Passenger):
         )
 
 
+# --- Helper Functions for Input Validation ---
 
+
+def get_non_empty_input(prompt: str) -> str:
+    """Prompts the user until a non-empty string is entered."""
+    while True:
+        value = input(prompt).strip()
+        if value:
+            return value
+        print("Error: Input cannot be empty. Please try again.")
+
+
+def get_yes_no_input(prompt: str) -> bool:
+    """Prompts the user for a yes/no response and returns a boolean."""
+    while True:
+        choice = input(prompt).strip().lower()
+        if choice in ("y", "yes"):
+            return True
+        if choice in ("n", "no"):
+            return False
+        print("Error: Please enter 'y' for Yes or 'n' for No.")
 
 
 Python
