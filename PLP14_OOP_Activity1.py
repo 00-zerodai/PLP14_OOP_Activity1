@@ -21,7 +21,7 @@ class Passenger:
             f"Baggage Limit  : {self.get_weight_allowance()} kg"
         )
         
-Python
+
 class EconomyPassenger(Passenger):
     """Child class for Economy Class passengers."""
 
@@ -71,7 +71,7 @@ class BusinessPassenger(Passenger):
        )
 
 
-Python
+
 class FirstClassPassenger(Passenger):
     """Child class for First Class passengers."""
 
@@ -122,7 +122,7 @@ def get_yes_no_input(prompt: str) -> bool:
         print("Error: Please enter 'y' for Yes or 'n' for No.")
 
 
-Python
+
 # --- Terminal Booking Workflow ---
 
 
