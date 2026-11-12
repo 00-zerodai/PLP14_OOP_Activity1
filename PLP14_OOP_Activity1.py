@@ -20,3 +20,28 @@ class Passenger:
             f"Travel Date    : {self.date}\n"
             f"Baggage Limit  : {self.get_weight_allowance()} kg"
         )
+        
+Python
+class EconomyPassenger(Passenger):
+    """Child class for Economy Class passengers."""
+
+    def __init__(
+        self,
+        name: str,
+        location: str,
+        destination: str,
+        date: str,
+        seat_preference: str,
+    ):
+        super().__init__(name, location, destination, date)
+        self.seat_preference = seat_preference
+
+    def get_passenger_info(self) -> str:
+        base_info = super().get_passenger_info()
+        return (
+            f"=== ECONOMY CLASS TICKET ===\n"
+            f"{base_info}\n"
+            f"Seat Preference: {self.seat_preference}"
+        )
+
+
