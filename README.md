@@ -35,13 +35,16 @@ Our group actively collaborated to build this system. Below is the breakdown of 
 3. Navigate to the directory containing the file.
 4. Run the following command:
    bash
-   python PLP14_OOP_Activity1.py
+   python PLP14_OOP_Activity1.py or python3 PLP14_OOP_Activity1.py on mac
    
-5. Follow the on-screen prompts to book a ticket!
+   
+6. Follow the on-screen prompts to book a ticket! 
 
 ## 📁 Submission Deliverables
 
-*   PLP14_OOP_Activity1.py: The complete, runnable Python source code.
-*   PLP14_OOP_Activity1_Video.mp4: A 5-10 minute live walkthrough and code explanation (uploaded to Canvas).
-*   *Proof of Collaboration*: Visible via our Git commit history (or attached Live Share screenshots on Canvas).
->>>>>>> 5b437e88555eb6572bd924c0c2e1e3ebe15ed188.
+* GitHub Repo with the main python file, README.md and commit history.
+* Youtube Video of presentation
+* ## Video Presentation
+Watch our live coding walkthrough and terminal demonstration on YouTube:
+- **[PLP 14 — Activity 1: Airline Ticket Booking System (Video Walkthrough)](https://youtu.be/ey62XhUkSfk)**
+
