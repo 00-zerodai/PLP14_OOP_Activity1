@@ -15,7 +15,7 @@ Our group actively collaborated to build this system. Below is the breakdown of 
 *   *Steve*: Driver - FirstClassPassenger Child Class (with chauffeur logic)
 *   *Frank*: Navigator - Input Validation & Error Handling Helpers
 *   *Blaise*: Navigator & Presenter - Interactive CLI Workflow & Integration
-*   Absent Members: None
+
 
 ## ✨ Features
 
