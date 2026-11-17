@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 # PLP 14: Airline Ticket Booking System (OOP in Python)
 
 This repository contains the solution for *Activity 1: Passenger booking a ticket* for Peer Learning Project (PLP) Group 14. 
